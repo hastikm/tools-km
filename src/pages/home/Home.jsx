@@ -1,12 +1,13 @@
-'use client';
+// Home.jsx
 import React from "react";
-import Example from "../../components/example";
-
+import Navbar from "../../components/navbar";
+import Example from "../../components/Example";
 const Home = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      <Example />
-    </div>
+    <Example>
+      <Navbar />
+  
+    </Example>
   );
 };
 

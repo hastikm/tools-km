@@ -1,18 +1,11 @@
-import React from 'react'
-import icon from '../assets/icons/symbole.png'
+import React from 'react';
+
 const Navbar = () => {
   return (
-    <div className='lalezar'>
-      <ul>
-           <div>
-            <img src={icon} alt="icon-nav"  width={100}/>
-           <li className=''>Km Tools</li>
-           
-           </div>
-           <li>خانه</li>
 
-
-      </ul>
+    <div className='w-full h-16  '>
+    <h1>hasti</h1>
+    <h2>welcome</h2>
     </div>
   )
 }
