@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #222222;
+
+}
+
+@font-face {
+  font-family: 'lalezar';
+  src: url(./assets//fonts/Lalezar-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'b-yekan';
+  src: url(./assets/fonts/Yekan.ttf);
+}
+
+.lalezar{
+  font-family: 'lalezar';
+
+}
+
+.Byekan{
+  font-family: 'b-yekan';
+}
+
+.gradient-background {
+  background: linear-gradient(322deg,#1d1717,#000000,#5c1e99,#16169d);
+  background-size: 240% 240%;
+  animation: gradient-animation 24s ease infinite;
+}
+
+.gradient-background {
+  background: linear-gradient(157deg,#111111,#5d25c4,#0d0b13,#000006,#000006);
+  background-size: 300% 300%;
+  animation: gradient-animation 30s ease infinite;
+}
+
+.gradient-background {
+  background: linear-gradient(175deg,#000000,#5016a1,#000000,#0c0c0c);
+  background-size: 240% 240%;
+  animation: gradient-animation 40s ease infinite;
+}
+
+.gradient-background {
+  background: linear-gradient(135deg,#000000,#000000,#5517a5,#4b1197);
+  background-size: 240% 240%;
+  animation: gradient-animation 40s ease infinite;
+}
+
+.gradient-background {
+  background: linear-gradient(344deg,#000000,#000000,#5517a5,#000000,#000000);
+  background-size: 300% 300%;
+  animation: gradient-animation 35s ease infinite;
+}
+
+.gradient-background {
+  background: linear-gradient(300deg,#5d15ba,#000000,#000000);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

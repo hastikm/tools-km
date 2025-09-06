@@ -1,0 +1,19 @@
+@keyframes meteor {
+  0% {
+    transform: translate(0, 0) rotate(var(--angle));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-500px, 500px) rotate(var(--angle));
+    opacity: 0;
+  }
+}
+
+.animate-meteor {
+  animation-name: meteor;
+  animation-timing-function: linear;
+  animation-duration: var(--duration, 5s); /* از duration که در React تعیین شده استفاده کن */
+  animation-delay: var(--delay, 0s);       /* از delay که در React تعیین شده استفاده کن */
+  animation-iteration-count: infinite;      /* مهم: برای تکرار */
+  animation-fill-mode: none;                /* وقتی تمام شد دوباره برگرده */
+}
