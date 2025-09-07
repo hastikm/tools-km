@@ -1,7 +1,7 @@
 // Home.jsx
 import React from "react";
 import Navbar from "../../components/navbar";
-import Example from "../../components/Example";
+import Example from "../../components/example";
 const Home = () => {
   return (
     <Example>

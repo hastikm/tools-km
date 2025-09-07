@@ -45,3 +45,11 @@ body {
     background-position: 0% 50%;
   }
 }
+
+
+@layer utilities{
+
+  .custom-shadow{
+   box-shadow: rgba(0, 129, 69, 0.25) 0px 25px 50px -12px;
+  }
+}
