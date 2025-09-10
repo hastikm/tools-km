@@ -46,7 +46,9 @@ body {
   }
 }
 
-
+.color{
+  color: rgba(255, 59, 59, 0.782);
+}
 @layer utilities{
 
   .custom-shadow{
@@ -56,9 +58,10 @@ body {
   .borderm{
    border: 3px solid rgb(255, 255, 255);
    border-radius: 20px;
+  
   }
 
  .my-box {
-box-shadow: rgba(212, 0, 138, 0.25) 0px 54px 55px, rgba(235, 0, 141, 0.12) 0px -12px 30px, rgba(255, 0, 128, 0.12) 0px 4px 6px, rgba(226, 0, 165, 0.17) 0px 12px 13px, rgba(246, 0, 160, 0.09) 0px -3px 5px;
+box-shadow: rgba(178, 20, 172, 0.25) 0px 54px 55px, rgba(197, 27, 163, 0.12) 0px -12px 30px, rgba(161, 22, 150, 0.12) 0px 4px 6px, rgba(152, 17, 157, 0.17) 0px 12px 13px, rgba(173, 28, 125, 0.09) 0px -3px 5px;
 }
 }
