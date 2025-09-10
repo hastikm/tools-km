@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
   import { useEffect } from 'react';
   import { IoMdArrowDropdown } from "react-icons/io";
+  import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // کنترل باز/بسته بودن منو
@@ -35,13 +36,13 @@ useEffect(() => {
         <div className="flex items-center gap-12">
           {/* لوگو */}
           <div className="flex items-center gap-4">
-            <h1 className="font-semibold text-green-300 custom-shadow">Km Tools</h1>
-            <img src={mainicon} alt="header icon" width={60} className="max-lg:my-10" />
+          <Link to={'/'}>  <h1 className="font-semibold text-green-300 ">Km Tools</h1></Link>
+            <Link to={'/'}><img src={mainicon} alt="header icon" width={60} className="max-lg:my-10" /></Link>
           </div>
 
           {/* آیتم‌های منو فقط دسکتاپ */}
           <div className="flex gap-6 lg:flex hidden">
-            <p className="hover:text-green-500">خانه</p>
+            <Link to={'/'}> <p className="hover:text-green-500">خانه</p></Link>
             <p className="hover:text-green-500">دسته‌بندی‌ها </p>
             <IoMdArrowDropdown />
           </div>

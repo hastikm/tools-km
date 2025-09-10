@@ -51,10 +51,7 @@ body {
 }
 @layer utilities{
 
-  .custom-shadow{
-   box-shadow: rgba(0, 129, 69, 0.25) 0px 25px 50px -12px;
-  }
-
+ 
   .borderm{
    border: 3px solid rgb(255, 255, 255);
    border-radius: 20px;
