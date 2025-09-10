@@ -11,7 +11,7 @@ const Navbar = () => {
 
 useEffect(() => {
   const handleResize = () => {
-    if (window.innerWidth >= 1280) { // xl در Tailwind 1280px است
+    if (window.innerWidth >= 1023) { // xl در Tailwind 1280px است
       setIsOpen(false); // منو خودکار بسته شود
     }
   };
