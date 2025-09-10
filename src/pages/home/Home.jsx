@@ -8,18 +8,25 @@ const Home = () => {
   return (
     <Example>
       <Navbar />
-      <div className="container mx-auto min-h-screen flex flex-col">
-        <div className="flex flex-wrap gap-24 justify-center mt-40 mb-80">
+      
+      <div className="container mx-auto ">
+ 
+        <div className="py-40 flex flex-wrap gap-24 justify-center">
           {cards.map((card) => (
-            <Card
-              key={card.id}
-              title={card.title}
-              icon={card.icon}
-              color={card.color}
-              shadow={card.shadow}
-            />
+                      <Card
+            key={card.id}
+            title={card.title}
+            icon={card.icon}
+            color={card.color}
+            shadow={card.shadow}
+            routes={card.routes}   // این خط خیلی مهمه
+/>
           ))}
         </div>
+      </div>
+
+      <div>
+        sodfks;f
       </div>
     </Example>
   );
