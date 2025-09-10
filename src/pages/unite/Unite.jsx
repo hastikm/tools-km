@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Unite = () => {
   return (
     <div>
-      Qr page
+      Unite page
     </div>
   )
 }
 
-export default Qr;
+export default Unite

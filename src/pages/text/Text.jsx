@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Text = () => {
   return (
     <div>
-      Qr page
+      text page
     </div>
   )
 }
 
-export default Qr;
+export default Text

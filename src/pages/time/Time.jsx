@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const time = () => {
   return (
     <div>
-      Qr page
+      Time page
     </div>
   )
 }
 
-export default Qr;
+export default time

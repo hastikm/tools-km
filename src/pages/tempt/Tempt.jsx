@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Tempt = () => {
   return (
     <div>
-      Qr page
+      tempt page
     </div>
   )
 }
 
-export default Qr;
+export default Tempt

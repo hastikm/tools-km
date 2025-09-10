@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Health = () => {
   return (
     <div>
-      Qr page
+      Health page
     </div>
   )
 }
 
-export default Qr;
+export default Health

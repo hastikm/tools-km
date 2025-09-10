@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Ip = () => {
   return (
     <div>
-      Qr page
+       Ip page
     </div>
   )
 }
 
-export default Qr;
+export default Ip

@@ -3,15 +3,18 @@ import React, { useEffect, useState } from "react";
 export const Meteors = ({ number = 30 }) => {
   const [meteorStyles, setMeteorStyles] = useState([]);
 
-  useEffect(() => {
-    const styles = [...new Array(number)].map(() => ({
+  const generateStyles = () => {
+    return [...new Array(number)].map(() => ({
       "--angle": "-215deg",
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
       animationDelay: Math.random() * 1 + 0.2 + "s",
       animationDuration: Math.floor(Math.random() * 8 + 2) + "s",
     }));
-    setMeteorStyles(styles);
+  };
+
+  useEffect(() => {
+    setMeteorStyles(generateStyles());
   }, [number]);
 
   return (

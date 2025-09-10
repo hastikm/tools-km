@@ -65,3 +65,18 @@ body {
 box-shadow: rgba(178, 20, 172, 0.25) 0px 54px 55px, rgba(197, 27, 163, 0.12) 0px -12px 30px, rgba(161, 22, 150, 0.12) 0px 4px 6px, rgba(152, 17, 157, 0.17) 0px 12px 13px, rgba(173, 28, 125, 0.09) 0px -3px 5px;
 }
 }
+
+@keyframes meteor {
+  0% {
+    transform: translate(0,0) rotate(var(--angle));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-300px, 600px) rotate(var(--angle));
+    opacity: 0;
+  }
+}
+
+.animate-meteor {
+  animation: meteor linear infinite;
+}

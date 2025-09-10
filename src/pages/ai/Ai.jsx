@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Qr = () => {
+const Ai = () => {
   return (
     <div>
-      Qr page
+      Ai page
     </div>
   )
 }
 
-export default Qr;
+export default Ai
