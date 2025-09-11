@@ -25,3 +25,30 @@ html, body, #root {
   }
 }
 
+.color-pic {
+  appearance: none; /* استایل پیش‌فرض مرورگر رو حذف می‌کنه */
+  -webkit-appearance: none;
+  border: 2px solid #a3a3a3;
+
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+  background: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  padding: 2px;
+  margin-right: 20px;
+ 
+}
+
+/* افکت هاور */
+.color-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  border-color: #9ca3af;
+}
+
+/* برای دایره‌ای کردن کامل */
+.color-pic.round {
+  border-radius: 50%;
+}
