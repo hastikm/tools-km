@@ -1,4 +1,5 @@
 App.jsx
+import 'leaflet/dist/leaflet.css'; 
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Qr from "./pages/QRcode/Qr"; 
