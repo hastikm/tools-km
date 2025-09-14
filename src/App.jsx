@@ -7,7 +7,7 @@ import Picture from "./pages/picture/picture";
 import Map from "./pages/map/Map";
 import Health from "./pages/healthy/Health";
 import Ip from "./pages/ip/Ip";
-import Time from "./pages/time/time";
+import Time from "../src/pages/time/Time";
 import Text from "./pages/text/Text";
 import Unite from "./pages/unite/Unite";
 import Ai from "./pages/ai/Ai";
