@@ -15,3 +15,10 @@
     background-position: 0% 50%;
   }
 }
+
+.my-shadow{
+  box-shadow: rgba(21, 255, 173, 0.4) 0px 5px, rgba(21, 255, 157, 0.3) 0px 10px, rgba(7, 255, 180, 0.2) 0px 15px, rgba(12, 255, 210, 0.1) 0px 20px, rgba(27, 255, 232, 0.05) 0px 25px;
+}
+.my-shadow2{
+  box-shadow: rgba(20, 232, 154, 0.35) 0px 5px 15px;
+}
