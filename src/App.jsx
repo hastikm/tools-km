@@ -20,7 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/qrcode" element={<Qr />} />
-      <Route path="/picture" element={<Picture />} />
+      <Route path="/image" element={<Picture />} />
       <Route path="/map" element={<Map />} />
       <Route path="/health" element={<Health />} />
       <Route path="/ip" element={<Ip />} />
