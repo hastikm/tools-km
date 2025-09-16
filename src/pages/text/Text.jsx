@@ -1,91 +1,119 @@
 import React, { useState } from 'react';
 import '../text/text.css';
 import Navbar from '../../components/navbar';
-import { FcBusinesswoman, FcBusinessman } from "react-icons/fc";
+import { FcBusinesswoman } from "react-icons/fc";
+import axios from 'axios';
 
 const Text = () => {
-  const [selectedVoice, setSelectedVoice] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('fa');
+  const [text, setText] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [audioUrl, setAudioUrl] = useState('');
+
+  const voices = {
+    female: {
+      en: "EXAVITQu4vr4xnSDxMaL",
+      fa: "21m00Tcm4TlvDq8ikWAM"
+    }
+  };
+
+  const speak = async () => {
+    if (!text) return alert("متن وارد کنید!");
+    setLoading(true);
+    setAudioUrl('');
+
+    try {
+      const voiceId = voices.female[selectedLanguage];
+      const response = await axios.post(
+        `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}/stream`,
+        { text },
+        {
+          headers: {
+            "xi-api-key": "sk_92184f8f4a0d151de00d1df4e35b706cdd12e45e327474d7",
+            "Content-Type": "application/json",
+          },
+          responseType: "blob",
+        }
+      );
+
+      const blob = new Blob([response.data], { type: "audio/mpeg" });
+      const url = URL.createObjectURL(blob);
+      setAudioUrl(url);
+
+    } catch (err) {
+      console.error(err);
+      alert("خطا در تبدیل متن به صدا");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <div className="gradient-background w-full min-h-screen">
+    <div className="gradient-background w-full min-h-screen  p-10 "> {/* فاصله از بالا بیشتر شد */}
       <Navbar />
-      <div className="pt-32 grid grid-cols-1 xl:grid-cols-2 gap-10 mr-28 ">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 mt-28">
 
-        {/* ستون ۱ */}
-        <div className="flex flex-col">
+        {/* ستون ۱: تنظیمات */}
+        <div className="flex flex-col space-y-6">
+
+          <h1 className="text-3xl font-bold text-white mb-4">تبدیل متن به صدا</h1>
 
           {/* انتخاب زبان */}
-          <select className="text-[22px] w-[600px] px-6 py-3 border border-gray-300 rounded-2xl bg-white text-black lalezar my-shadow focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <select
+            className="text-[20px] w-full px-6 py-3 border border-gray-300 rounded-2xl bg-white text-black font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400"
+            value={selectedLanguage}
+            onChange={(e) => setSelectedLanguage(e.target.value)}
+          >
             <option value="fa">فارسی</option>
             <option value="en">انگلیسی</option>
           </select>
 
-          {/* انتخاب صدا */}
-          <div className="text-[20px] mt-10 bg-white text-black w-[600px] rounded-2xl my-shadow2 lalezar p-4 flex flex-col">
-            <h1 className="text-[24px] font-bold mb-2">انتخاب صدا</h1>
-            <hr className="mb-4" />
-
-            {/* زن */}
-            <label className="flex items-center gap-3 cursor-pointer text-[22px] hover:text-blue-600 transition-colors">
-              <input
-                type="radio"
-                name="voice"
-                value="female"
-                checked={selectedVoice === 'female'}
-                onChange={(e) => setSelectedVoice(e.target.value)}
-                className="w-6 h-6 accent-green-500"
-              />
-              <FcBusinesswoman size={30} />
-              <span>زن</span>
-            </label>
-
-            {/* مرد */}
-            <label className="flex items-center gap-3 cursor-pointer text-[22px] hover:text-blue-600 mt-6 transition-colors">
-              <input
-                type="radio"
-                name="voice"
-                value="male"
-                checked={selectedVoice === 'male'}
-                onChange={(e) => setSelectedVoice(e.target.value)}
-                className="w-6 h-6 accent-green-500"
-              />
-              <FcBusinessman size={30} />
-              <span>مرد</span>
-            </label>
-
-            {/* نمایش انتخاب کاربر */}
-            {selectedVoice && (
-              <p className="mt-4 text-green-500">
-                شما <strong>{selectedVoice === 'female' ? 'زن' : 'مرد'}</strong> را انتخاب کردید.
-              </p>
-            )}
+          {/* صدا */}
+          <div className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-md">
+            <FcBusinesswoman size={40} />
+            <span className="text-lg font-semibold">صدای زن</span>
           </div>
-       
-              <div>
-                <button className='lalezar w-[600px] h-[80px] bg-green-500 mt-8 rounded-3xl text-[27px]'>تبدیل به صدا</button>
-              </div>
-               
+
+          {/* دکمه تبدیل */}
+          <button
+            onClick={speak}
+            disabled={loading}
+            className={`w-full py-5 rounded-3xl text-xl font-bold text-white transition-colors ${
+              loading ? 'bg-green-300 cursor-not-allowed' : 'bg-green-500 hover:bg-green-600'
+            }`}
+          >
+            {loading ? "در حال تولید..." : "تبدیل به صدا"}
+          </button>
+
+          {/* نمایش فایل صوتی */}
+          {audioUrl && (
+            <div className="mt-4 bg-white rounded-2xl shadow-md p-4 flex flex-col items-center gap-3">
+              <audio controls src={audioUrl} className="w-full rounded-md" />
+              <a
+                href={audioUrl}
+                download="speech.mp3"
+                className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-semibold transition-colors"
+              >
+                دانلود فایل صوتی
+              </a>
+            </div>
+          )}
+
         </div>
 
-        {/* ستون ۲ */}
-
-    <div className="bg-white rounded-2xl p-6 my-shadow2 text-lg ml-52">
-        <textarea
-          placeholder="اینجا تایپ کن..."
-          className="w-[600px] h-[400px] bg-white border border-gray-300 rounded-2xl shadow-inner p-4 text-black text-[20px] lalezar focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 text-right"
-        />
-        
-    </div>
-
-     
-      {/* show voice */}
-      <div >
-        show voice
-      </div>
+        {/* ستون ۲: متن */}
+        <div className="bg-white rounded-2xl shadow-md p-6 text-black">
+          <textarea
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="اینجا متن خود را وارد کنید..."
+            className="w-full h-[400px] p-4 rounded-2xl border border-gray-300 shadow-inner text-[18px] focus:outline-none focus:ring-2 focus:ring-green-400 text-right bg-white"
+          />
+        </div>
 
       </div>
     </div>
   );
-}
+};
 
 export default Text;
