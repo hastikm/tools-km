@@ -71,7 +71,7 @@ export default function Picture() {
     <div className="gradient-background w-full min-h-screen">
       <Navbar />
 
-      <div className="max-w-3xl mx-auto  bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg p-6 mt-28">
+      <div className="max-w-3xl mx-auto  bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg p-6 mt-28 text-black">
         {/* تب‌ها */}
         <div className="flex mb-4 border-b">
           <button
