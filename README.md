@@ -1,12 +1,33 @@
-# React + Vite
+# Km Tools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Km Tools**, a web platform designed to provide a collection of practical and daily-use tools that simplify everyday digital tasks. Our goal is to make various online utilities easily accessible and efficient for everyone. Whether you need to generate QR codes, convert text, check IP addresses, or use other handy tools, Km Tools is here to help you save time and accomplish tasks more efficiently.
 
-Currently, two official plugins are available:
+![web img](../assets/icons/Screenshot%202025-09-18%20150203.png)
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Daily-use Tools**: Access a variety of tools that help streamline your day-to-day activities.
+- **User-friendly Interface**: Simple and clean design for easy navigation and quick access to tools.
+- **Responsive Design**: Works seamlessly on desktop and mobile devices.
+- **Future AI Integration**: An AI-powered section is under development, which will bring more advanced capabilities to the platform.
 
-## Expanding the ESLint configuration
+## Current Status
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Km Tools is **still under active development**. Most of the tools are fully functional, but the AI features are still being built. We are continuously working to enhance the platform, add more tools, and improve the overall user experience.
+
+## Demo
+
+You can try the live demo here: [Km Tools Demo](https://tools-km.vercel.app/)
+
+## Purpose
+
+The primary aim of Km Tools is to create a **centralized hub for useful online tools**, helping users save time and accomplish tasks more effectively. The platform is designed for anyone looking for simple, practical, and reliable web utilities.
+
+## Future Plans
+
+- Complete the AI-powered tools section.
+- Add more categories and tools based on user feedback.
+- Improve performance and enhance UI/UX with smoother interactions.
+
+---
+
+Thank you for visiting Km Tools! Stay tuned for updates as we continue to build and improve the platform.
