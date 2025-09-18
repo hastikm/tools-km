@@ -4,7 +4,7 @@
 const cards = [
   {
     id: 1,
-    title: "زمان",
+    title: "تاریخ",
     icon: "WiTime3",
     color: "rgb(255, 20, 147)",
     shadow: "rgba(212, 0, 138, 0.25) 0px 54px 55px, rgba(235, 0, 141, 0.12) 0px -12px 30px, rgba(255, 0, 128, 0.12) 0px 4px 6px, rgba(226, 0, 165, 0.17) 0px 12px 13px, rgba(246, 0, 160, 0.09) 0px -3px 5px",
@@ -69,7 +69,7 @@ const cards = [
   },
   {
     id: 9,
-    title: "تبدیل  ",
+    title: " اعداد  ",
     icon: "BiMath",
     color: "rgb(75, 48, 227)",
     shadow: "rgba(52, 2, 255, 0.25) 0px 54px 55px, rgba(32, 2, 255, 0.12) 0px -12px 30px, rgba(3, 3, 255, 0.12) 0px 4px 6px, rgba(64, 0, 255, 0.17) 0px 12px 13px, rgba(24, 3, 255, 0.09) 0px -3px 5px",

@@ -1,38 +1,105 @@
-.container2{
-  width: 400pxn;
+/* کل صفحه */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Lalezar', sans-serif;
 }
-.screen{
-    height: 100px;
-    line-height: 100px;
-    padding: 0 20px;
-    font-size: 30px;
-    text-align: right;
-    background: #262834;
-    color: white;
+
+/* پس‌زمینه گرادینت */
+.gradient-background {
+  background: linear-gradient(311deg, #922bf7, #020202, #000000, #24d2ab);
+  background-size: 240% 240%;
+  animation: gradient-animation 24s ease infinite;
 }
-.buttons{
-    display: flex;
-    flex-wrap: wrap;
+
+/* انیمیشن گرادینت */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-button{
-    width: 100px;
+
+/* صفحه نمایش ماشین حساب */
+.screen {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  background-color: #262834;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+  padding: 0 20px;
+  line-height: 100px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  overflow-x: auto;
+}
+
+/* دکمه‌ها */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* دکمه معمولی */
+.buttons button {
+  height: 80px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* دکمه رنگی برای عملگرها */
+.color {
+  background-color: #08ac81;
+  color: #262834;
+  font-weight: bold;
+}
+
+.color:hover {
+  background-color: #3aa1b5;
+}
+
+/* دکمه Clear و = */
+.twoCol {
+  grid-column: span 2;
+}
+
+/* دکمه عادی */
+.buttons button:not(.color) {
+  background-color: #262834;
+  color: white;
+}
+
+.buttons button:hover:not(.color) {
+  background-color: #3a3a4f;
+}
+
+/* موبایل واکنش‌گرا */
+@media (max-width: 500px) {
+  .screen {
+    font-size: 1.5rem;
     height: 80px;
-    border: 0;
-    outline: 0;
-    color: white;
-    background: #262834;
-    cursor: pointer;
-    font-size: 25px;
-    border: 1px solid rgb(92, 92, 92);
+    line-height: 80px;
+    padding: 0 10px;
+  }
+  .buttons button {
+    height: 60px;
+    font-size: 1.2rem;
+  }
 }
-.color{
-    background: #56cbdb;
-    color: #262834;
-    font-weight: bold;
-}
-.twoCol{
-    width: 200px;
-}
+
 
 .gradient-background {
   background: linear-gradient(311deg,#922bf7,#020202,#000000,#24d2ab);
