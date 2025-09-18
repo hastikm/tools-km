@@ -2,7 +2,7 @@
 
 Welcome to **Km Tools**, a web platform designed to provide a collection of practical and daily-use tools that simplify everyday digital tasks. Our goal is to make various online utilities easily accessible and efficient for everyone. Whether you need to generate QR codes, convert text, check IP addresses, or use other handy tools, Km Tools is here to help you save time and accomplish tasks more efficiently.
 
-![web img](../assets/icons/Screenshot%202025-09-18%20150203.png)
+![web img](./src/assets/icons/Screenshot%202025-09-18%20150203.png)
 ## Features
 
 - **Daily-use Tools**: Access a variety of tools that help streamline your day-to-day activities.
