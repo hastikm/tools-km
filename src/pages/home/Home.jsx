@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar";
 import Example from "../../components/example";
 import Card from "./Card";
 import cards from "./Hjson";
+import Footer from "../../components/footer";
 
 const Home = () => {
   return (
@@ -26,9 +27,11 @@ const Home = () => {
       </div>
 
       <div>
-        sodfks;f
+        <Footer />
       </div>
     </Example>
+
+    
   );
 };
 
